@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-nquire300-barcode" version="0.0.0">
+  <name>Nquire300Barcode</name>
+  <description>Control the barcode of the NQuire 300 from JS</description>
+  <license>Apache 2.0</license>
+  <keywords>cordova, plugin, barcode, nquire</keywords>
+
+  <js-module src="www/nquire300Barcode.js" name="nquire300Barcode">
+    <clobbers target="nquire300Barcode" />
+  </js-module>
+
+  <!-- android -->
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="Nquire300Barcode" >
+        <param name="android-package" value="cordova.plugin.Nquire300Barcode"/>
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/Nquire300Barcode.java" target-dir="src/cordova/plugin" />
+  </platform>
+</plugin>
