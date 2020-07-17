@@ -1,20 +1,28 @@
-﻿# cordova-plugin-template
+﻿# NQuire 300 barcode reader plugin
 
-This is my personal [Apache Cordova](https://cordova.apache.org) plugin template containing examples for Android and iOS. It simply provides an *echo(..)* method that returns the passed value.
+Allows you to control the builtin scanner on NQuire 300 devices [https://www.newland-id.com/product/nquire-300/](https://www.newland-id.com/product/nquire-300/)
 
 
-## Getting started
-
-Once you're familiar with that process, you may install this plugin with the [Cordova CLI](https://cordova.apache.org/docs/en/4.0.0/guide_cli_index.md.html):
+## Install
 
 ```
-cordova plugin add https://github.com/hirtenfelder/cordova-plugin-template.git
+cordova plugin add https://github.com/tartinesKiller/cordova-plugin-nquire300-barcode
 ```
 
 ## Usage
-
-If the plugin was added to your Cordova (or Ionic) project, you may use it like that:
-
+### Enable / disable the scanner
 ```
-navigator.template.echo({string} echoValue, {function} successCallback);
+window.nquire300Barcode.enableReader(true);
+```
+### Enable / disable the continuous mode
+```
+window.nquire300Barcode.enableContinuousMode(true);
+```
+### Enable / disable the good read LED
+```
+window.nquire300Barcode.enableGoodReadLed(true);
+```
+### Enable / disable the good read BEEP
+```
+window.nquire300Barcode.enableGoodReadSound(true);
 ```
